@@ -32,7 +32,7 @@ use yii\web\View;
         <h2>API version list</h2>
         <div class="list-group">
             <?php foreach ($versionList as $version) { ?>
-                <a href="/api/v<?= $version ?>" class="list-group-item">
+                <a href="<?= $_SERVER['REQUEST_URI'] . 'v' .  $version ?>" class="list-group-item">
                     API version <?= $version ?>
                 </a>
             <?php } ?>
