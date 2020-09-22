@@ -1,6 +1,6 @@
 <?php
 
-namespace ZnBundle\Dashboard\Symfony\Api\Controllers;
+namespace ZnBundle\Dashboard\Symfony4\Api\Controllers;
 
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnBundle\Dashboard\Domain\Interfaces\Services\DocServiceInterface;
