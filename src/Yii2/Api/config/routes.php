@@ -2,5 +2,5 @@
 
 return [
     "{$version}" => "dashboard/doc/show",
-    "/" => "dashboard/doc/index",
+    "" => "dashboard/doc/index",
 ];

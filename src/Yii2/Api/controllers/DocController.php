@@ -32,7 +32,8 @@ class DocController extends Controller
 
     public function actionShow()
     {
-        $version = API_VERSION;
+        $version = API_VERSION_STRING;
+        $version = str_replace('v', '', $version);
         try {
             $htmlContent = $this->docService->htmlByVersion($version);
         } catch (NotFoundException $e) {
