@@ -6,7 +6,7 @@ use ZnCore\Base\Libs\I18Next\Facades\I18Next;
 
 $this->title = I18Next::t('dashboard', 'main.title');
 
-$data = empty($data) ? EMP : $data;
+$data = empty($data) ? '' : $data;
 
 ?>
 

@@ -4,7 +4,7 @@
 
 $this->title = Yii::t('dashboard/main', 'title');
 
-$data = empty($data) ? EMP : $data;
+$data = empty($data) ? '' : $data;
 
 ?>
 
