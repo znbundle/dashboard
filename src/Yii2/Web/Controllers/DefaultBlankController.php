@@ -1,10 +1,10 @@
 <?php
 
-namespace ZnBundle\Dashboard\Yii2\Web\controllers;
+namespace ZnBundle\Dashboard\Yii2\Web\Controllers;
 
 use yii\web\Controller;
 
-class DefaultController extends Controller
+class DefaultBlankController extends Controller
 {
 	
 	public function actionIndex()

@@ -9,16 +9,16 @@ class Bundle extends BaseBundle
 
     public function yiiAdmin(): array
     {
-        return [
-
-        ];
+        return $this->yiiWeb();
     }
 
     public function yiiWeb(): array
     {
         return [
             'modules' => [
-                'dashboard' => 'ZnBundle\Dashboard\Yii2\Web\Module',
+                'dashboard' => [
+                    'class' => __NAMESPACE__ . '\Yii2\Web\Module'
+                ],
             ],
         ];
     }
@@ -40,7 +40,7 @@ class Bundle extends BaseBundle
     public function container(): array
     {
         return [
-            [__DIR__ . '/Domain/config/container.php', 'singletons'],
+            __DIR__ . '/Domain/config/container.php',
         ];
     }
 }
