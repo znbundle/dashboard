@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Dashboard\Yii2\Widgets\Dashboard\Helpers;
 
-use Packages\Layout\Domain\Helpers\MenuHelper;
+use ZnSandbox\Sandbox\Layout\Domain\Helpers\MenuHelper;
 use ZnCore\Base\Helpers\ClassHelper;
 use ZnLib\Web\Widgets\Base\BaseWidget2;
 
