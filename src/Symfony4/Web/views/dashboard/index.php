@@ -14,5 +14,6 @@ $this->title = I18Next::t('dashboard', 'main.title');
 ?>
 
 <?= DashboardWidget::widget([
+    'rowTemplate' => '<div class="row mb-4">{html}</div>',
     'items' => $widgetConfigList,
 ]) ?>
