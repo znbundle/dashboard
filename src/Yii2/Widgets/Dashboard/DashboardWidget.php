@@ -4,6 +4,7 @@ namespace ZnBundle\Dashboard\Yii2\Widgets\Dashboard;
 
 use ZnBundle\Dashboard\Yii2\Widgets\Dashboard\Helpers\DashboardHelper;
 use ZnCore\Base\Helpers\StringHelper;
+use ZnCore\Base\Helpers\TemplateHelper;
 use ZnLib\Web\Widgets\Base\BaseWidget2;
 
 class DashboardWidget extends BaseWidget2
@@ -24,7 +25,7 @@ class DashboardWidget extends BaseWidget2
         $tree = DashboardHelper::toTree($counterList, $perLine);
         $html = $this->renderPanel($tree);
         if (!empty($panel['label'])) {
-            $title = StringHelper::renderTemplate($this->labelTemplate, ['html' => $panel['label']]);
+            $title = TemplateHelper::renderTemplate($this->labelTemplate, ['html' => $panel['label']]);
             $html = $title . $html;
         }
         return $html;
@@ -36,9 +37,9 @@ class DashboardWidget extends BaseWidget2
         foreach ($tree as $lineItems) {
             $rowHtml = '';
             foreach ($lineItems as $widgetHtml) {
-                $rowHtml .= StringHelper::renderTemplate($this->colTemplate, ['html' => $widgetHtml]);
+                $rowHtml .= TemplateHelper::renderTemplate($this->colTemplate, ['html' => $widgetHtml]);
             }
-            $html .= StringHelper::renderTemplate($this->rowTemplate, ['html' => $rowHtml]);
+            $html .= TemplateHelper::renderTemplate($this->rowTemplate, ['html' => $rowHtml]);
         }
         return $html;
     }

@@ -4,6 +4,7 @@ namespace ZnBundle\Dashboard\Domain\Services;
 
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Base\Helpers\StringHelper;
+use ZnCore\Base\Helpers\TemplateHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnBundle\Dashboard\Domain\Interfaces\Services\DocServiceInterface;
 
@@ -33,7 +34,7 @@ class DocService implements DocServiceInterface
     }
 
     public function htmlByVersion(int $version): string {
-        $fileName = StringHelper::renderTemplate($this->docFileNameMask, ['version' => $version]);
+        $fileName = TemplateHelper::renderTemplate($this->docFileNameMask, ['version' => $version]);
         $docFileName = FileHelper::path($this->docDirectory . '/' . $fileName);
         $htmlContent = @file_get_contents($docFileName);
         if(empty($htmlContent)) {
