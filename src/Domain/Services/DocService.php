@@ -34,7 +34,7 @@ class DocService implements DocServiceInterface
     }
 
     public function htmlByVersion(int $version): string {
-        $fileName = TemplateHelper::renderTemplate($this->docFileNameMask, ['version' => $version]);
+        $fileName = TemplateHelper::render($this->docFileNameMask, ['version' => $version]);
         $docFileName = FileHelper::path($this->docDirectory . '/' . $fileName);
         $htmlContent = @file_get_contents($docFileName);
         if(empty($htmlContent)) {

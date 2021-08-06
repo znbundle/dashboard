@@ -25,7 +25,7 @@ class DashboardWidget extends BaseWidget2
         $tree = DashboardHelper::toTree($counterList, $perLine);
         $html = $this->renderPanel($tree);
         if (!empty($panel['label'])) {
-            $title = TemplateHelper::renderTemplate($this->labelTemplate, ['html' => $panel['label']]);
+            $title = TemplateHelper::render($this->labelTemplate, ['html' => $panel['label']]);
             $html = $title . $html;
         }
         return $html;
@@ -37,9 +37,9 @@ class DashboardWidget extends BaseWidget2
         foreach ($tree as $lineItems) {
             $rowHtml = '';
             foreach ($lineItems as $widgetHtml) {
-                $rowHtml .= TemplateHelper::renderTemplate($this->colTemplate, ['html' => $widgetHtml]);
+                $rowHtml .= TemplateHelper::render($this->colTemplate, ['html' => $widgetHtml]);
             }
-            $html .= TemplateHelper::renderTemplate($this->rowTemplate, ['html' => $rowHtml]);
+            $html .= TemplateHelper::render($this->rowTemplate, ['html' => $rowHtml]);
         }
         return $html;
     }
