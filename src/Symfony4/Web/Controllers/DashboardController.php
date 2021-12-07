@@ -8,6 +8,8 @@ use ZnBundle\Dashboard\Domain\Enums\Rbac\AppPersonPermissionEnum;
 use ZnBundle\Dashboard\Domain\Enums\Rbac\DashboardPermissionEnum;
 use ZnBundle\Dashboard\Domain\Interfaces\Services\DashboardServiceInterface;
 use ZnBundle\Dashboard\Domain\Interfaces\Services\PersonServiceInterface;
+use ZnBundle\Notify\Domain\Entities\EmailEntity;
+use ZnBundle\Notify\Domain\Interfaces\Services\EmailServiceInterface;
 use ZnCore\Domain\Exceptions\UnprocessibleEntityException;
 use ZnLib\Web\Symfony4\MicroApp\BaseWebController;
 use ZnLib\Web\Symfony4\MicroApp\Interfaces\ControllerAccessInterface;
@@ -22,9 +24,16 @@ class DashboardController extends BaseWebController implements ControllerAccessI
     protected $service;
 
     public function __construct(
-        DashboardServiceInterface $service
+        DashboardServiceInterface $service,
+        EmailServiceInterface $emailService
     )
     {
+
+
+
+        $this->emailService = $emailService;
+
+        //dd($emailEntity);
         $this->service = $service;
     }
     
@@ -39,6 +48,17 @@ class DashboardController extends BaseWebController implements ControllerAccessI
 
     public function index(Request $request): Response
     {
+        $dateTime = new \DateTime();
+        $dt = $dateTime->format(DATE_ATOM);
+//dd($dt);
+        $emailEntity = new EmailEntity();
+        $emailEntity->setTo('theyamshikov@yandex.ru');
+        $emailEntity->setSubject('Test subject ' . $dt);
+        $emailEntity->setBody('Test body ' . $dt);
+
+
+        $this->emailService->push($emailEntity);
+
         return $this->render('index', [
             'widgetConfigList' => $this->service->all(),
         ]);
