@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Dashboard\Domain\Enums\Rbac;
 
-use ZnCore\Base\Interfaces\GetLabelsInterface;
+use ZnCore\Contract\Enum\Interfaces\GetLabelsInterface;
 
 class DashboardPermissionEnum implements GetLabelsInterface
 {
