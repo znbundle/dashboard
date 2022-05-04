@@ -3,6 +3,7 @@
 namespace ZnBundle\Dashboard\Domain\Services;
 
 use ZnCore\Base\Exceptions\NotFoundException;
+use ZnCore\Base\Helpers\FindFileHelper;
 use ZnCore\Base\Helpers\StringHelper;
 use ZnCore\Base\Helpers\TemplateHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
@@ -21,7 +22,7 @@ class DocService implements DocServiceInterface
     }
 
     public function versionList(): array {
-        $list = FileHelper::scanDir(FileHelper::rootPath() . '/' . $this->docDirectory);
+        $list = FindFileHelper::scanDir(FileHelper::rootPath() . '/' . $this->docDirectory);
         $pattern = $this->generateRegExp($this->docFileNameMask);
         $result = [];
         foreach ($list as $fileName) {
