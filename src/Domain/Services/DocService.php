@@ -3,7 +3,8 @@
 namespace ZnBundle\Dashboard\Domain\Services;
 
 use ZnCore\Base\Exceptions\NotFoundException;
-use ZnCore\Base\Helpers\FindFileHelper;
+use ZnCore\Base\Libs\FileSystem\Helpers\FilePathHelper;
+use ZnCore\Base\Libs\FileSystem\Helpers\FindFileHelper;
 use ZnCore\Base\Helpers\StringHelper;
 use ZnCore\Base\Helpers\TemplateHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
@@ -22,7 +23,7 @@ class DocService implements DocServiceInterface
     }
 
     public function versionList(): array {
-        $list = FindFileHelper::scanDir(FileHelper::rootPath() . '/' . $this->docDirectory);
+        $list = FindFileHelper::scanDir(FilePathHelper::rootPath() . '/' . $this->docDirectory);
         $pattern = $this->generateRegExp($this->docFileNameMask);
         $result = [];
         foreach ($list as $fileName) {
@@ -36,7 +37,7 @@ class DocService implements DocServiceInterface
 
     public function htmlByVersion(int $version): string {
         $fileName = TemplateHelper::render($this->docFileNameMask, ['version' => $version]);
-        $docFileName = FileHelper::path($this->docDirectory . '/' . $fileName);
+        $docFileName = FilePathHelper::path($this->docDirectory . '/' . $fileName);
         $htmlContent = @file_get_contents($docFileName);
         if(empty($htmlContent)) {
             throw new NotFoundException("Not found API documentation for version v{$version}!");
