@@ -3,7 +3,7 @@
 namespace ZnBundle\Dashboard\Yii2\Widgets\Dashboard;
 
 use ZnBundle\Dashboard\Yii2\Widgets\Dashboard\Helpers\DashboardHelper;
-use ZnCore\Base\Libs\Text\Helpers\StringHelper;
+
 use ZnCore\Base\Libs\Text\Helpers\TemplateHelper;
 use ZnLib\Web\Widgets\Base\BaseWidget2;
 
