@@ -5,8 +5,8 @@ namespace ZnBundle\Dashboard\Domain\Services;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Base\Libs\FileSystem\Helpers\FilePathHelper;
 use ZnCore\Base\Libs\FileSystem\Helpers\FindFileHelper;
-use ZnCore\Base\Helpers\StringHelper;
-use ZnCore\Base\Helpers\TemplateHelper;
+use ZnCore\Base\Libs\Text\Helpers\StringHelper;
+use ZnCore\Base\Libs\Text\Helpers\TemplateHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnBundle\Dashboard\Domain\Interfaces\Services\DocServiceInterface;
 
