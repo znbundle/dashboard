@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Dashboard\Domain\Services;
 
-use ZnCore\Base\Exceptions\NotFoundException;
+use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 use ZnCore\Base\Libs\FileSystem\Helpers\FilePathHelper;
 use ZnCore\Base\Libs\FileSystem\Helpers\FindFileHelper;
 

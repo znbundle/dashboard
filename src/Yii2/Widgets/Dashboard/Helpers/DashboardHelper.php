@@ -3,7 +3,7 @@
 namespace ZnBundle\Dashboard\Yii2\Widgets\Dashboard\Helpers;
 
 use ZnSandbox\Sandbox\Layout\Domain\Helpers\MenuHelper;
-use ZnCore\Base\Helpers\ClassHelper;
+use ZnCore\Base\Libs\Instance\Helpers\ClassHelper;
 use ZnLib\Web\Widgets\Base\BaseWidget2;
 
 class DashboardHelper

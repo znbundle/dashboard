@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Dashboard\Domain\Interfaces\Services;
 
-use ZnCore\Base\Exceptions\NotFoundException;
+use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 
 interface DocServiceInterface
 {
