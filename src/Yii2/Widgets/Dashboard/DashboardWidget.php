@@ -4,7 +4,7 @@ namespace ZnBundle\Dashboard\Yii2\Widgets\Dashboard;
 
 use ZnBundle\Dashboard\Yii2\Widgets\Dashboard\Helpers\DashboardHelper;
 
-use ZnCore\Base\Libs\Text\Helpers\TemplateHelper;
+use ZnCore\Base\Text\Helpers\TemplateHelper;
 use ZnLib\Web\Widgets\Base\BaseWidget2;
 
 class DashboardWidget extends BaseWidget2
