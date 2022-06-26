@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Dashboard\Symfony4\Widgets\Adv;
 
-use ZnLib\Web\Widgets\Base\BaseWidget2;
+use ZnLib\Web\Components\Widget\Base\BaseWidget2;
 
 class AdvSliderWidget extends BaseWidget2
 {
