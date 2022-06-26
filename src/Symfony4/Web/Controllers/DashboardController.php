@@ -11,7 +11,7 @@ use ZnBundle\Dashboard\Domain\Interfaces\Services\PersonServiceInterface;
 use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
 use ZnLib\Web\Symfony4\MicroApp\BaseWebController;
 use ZnLib\Web\Symfony4\MicroApp\Interfaces\ControllerAccessInterface;
-use ZnLib\Web\Symfony4\MicroApp\Traits\ControllerFormTrait;
+use ZnLib\Web\Components\Form\Traits\ControllerFormTrait;
 
 class DashboardController extends BaseWebController implements ControllerAccessInterface
 {
