@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Dashboard\Symfony4\Widgets\CardLink;
 
-use ZnLib\Web\Components\Widget\Base\BaseWidget2;
+use ZnLib\Web\Widget\Base\BaseWidget2;
 
 class CardLinkWidget extends BaseWidget2
 {

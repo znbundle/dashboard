@@ -9,9 +9,9 @@ use ZnBundle\Dashboard\Domain\Enums\Rbac\DashboardPermissionEnum;
 use ZnBundle\Dashboard\Domain\Interfaces\Services\DashboardServiceInterface;
 use ZnBundle\Dashboard\Domain\Interfaces\Services\PersonServiceInterface;
 use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
-use ZnLib\Web\Components\Controller\BaseWebController;
-use ZnLib\Web\Components\Controller\Interfaces\ControllerAccessInterface;
-use ZnLib\Web\Components\Form\Traits\ControllerFormTrait;
+use ZnLib\Web\Controller\Base\BaseWebController;
+use ZnLib\Web\Controller\Interfaces\ControllerAccessInterface;
+use ZnLib\Web\Form\Traits\ControllerFormTrait;
 
 class DashboardController extends BaseWebController implements ControllerAccessInterface
 {

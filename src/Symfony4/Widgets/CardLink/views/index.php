@@ -6,7 +6,7 @@
  * @var array $list
  */
 
-use ZnLib\Web\Components\View\Libs\View;
+use ZnLib\Web\View\Libs\View;
 
 ?>
 
