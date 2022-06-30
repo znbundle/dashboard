@@ -40,7 +40,7 @@ class DashboardController extends BaseWebController implements ControllerAccessI
     public function index(Request $request): Response
     {
         return $this->render('index', [
-            'widgetConfigList' => $this->service->all(),
+            'widgetConfigList' => $this->service->findAll(),
         ]);
     }
 }

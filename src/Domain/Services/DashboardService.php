@@ -26,7 +26,7 @@ class DashboardService extends BaseService implements DashboardServiceInterface
         return DashboardEntity::class;
     }*/
 
-    public function all()
+    public function findAll()
     {
         return $this->config;
     }

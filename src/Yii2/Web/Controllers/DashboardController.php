@@ -40,7 +40,7 @@ class DashboardController extends Controller
     public function actionIndex()
     {
         return $this->render('/../../Web/views/dashboard/index', [
-            'widgetConfigList' => $this->service->all(),
+            'widgetConfigList' => $this->service->findAll(),
         ]);
     }
 }
