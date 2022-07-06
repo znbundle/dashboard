@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Dashboard\Yii2\Api\controllers;
 
-use ZnCore\Domain\Entity\Exceptions\NotFoundException;
+use ZnCore\Entity\Exceptions\NotFoundException;
 use ZnBundle\Dashboard\Domain\Interfaces\Services\DocServiceInterface;
 use Yii;
 use yii\web\Controller;
