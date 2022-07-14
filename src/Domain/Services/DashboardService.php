@@ -3,8 +3,8 @@
 namespace ZnBundle\Dashboard\Domain\Services;
 
 use ZnBundle\Dashboard\Domain\Interfaces\Services\DashboardServiceInterface;
-use ZnCore\Service\Base\BaseService;
-use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
+use ZnDomain\Service\Base\BaseService;
+use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
 
 class DashboardService extends BaseService implements DashboardServiceInterface
 {
