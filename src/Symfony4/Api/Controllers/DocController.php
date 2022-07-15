@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Dashboard\Symfony4\Api\Controllers;
 
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 use ZnBundle\Dashboard\Domain\Interfaces\Services\DocServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

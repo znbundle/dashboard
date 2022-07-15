@@ -6,7 +6,7 @@ use ZnBundle\Dashboard\Domain\Interfaces\Services\DocServiceInterface;
 use ZnCore\FileSystem\Helpers\FilePathHelper;
 use ZnCore\FileSystem\Helpers\FindFileHelper;
 use ZnCore\Text\Helpers\TemplateHelper;
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 
 class DocService implements DocServiceInterface
 {
