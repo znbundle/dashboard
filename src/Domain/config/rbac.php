@@ -14,5 +14,8 @@ return [
         SystemRoleEnum::GUEST => [
             DashboardPermissionEnum::ALL,
         ],
+        SystemRoleEnum::USER => [
+            DashboardPermissionEnum::ALL,
+        ],
     ],
 ];
