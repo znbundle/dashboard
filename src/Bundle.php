@@ -37,12 +37,12 @@ class Bundle extends BaseBundle
         ];
     }
 
-    /*public function rbac(): array
+    public function rbac(): array
     {
         return [
             __DIR__ . '/Domain/config/rbac.php',
         ];
-    }*/
+    }
 
     public function container(): array
     {
